@@ -1,3 +1,5 @@
+import 'package:architecture_template/feature/home/view/mixin/home_view_mixin.dart';
+import 'package:architecture_template/feature/home/view/widget/home_app_bar.dart';
 import 'package:architecture_template/product/init/language/locale_keys.g.dart';
 import 'package:architecture_template/product/init/product_localization.dart';
 import 'package:architecture_template/product/utility/constants/enums/locales.dart';
@@ -11,10 +13,11 @@ class HomeView extends StatefulWidget {
   _HomeViewState createState() => _HomeViewState();
 }
 
-class _HomeViewState extends State<HomeView> {
+class _HomeViewState extends State<HomeView> with HomeViewMixin {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: const HomeAppBar() as PreferredSizeWidget,
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
