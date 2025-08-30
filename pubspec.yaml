@@ -13,21 +13,32 @@ dependencies:
     sdk: flutter
 
   #Core Dependencies
-  equatable: ^2.0.7 #Eşitlik kontrolü için kullanılır.
-  bloc: ^9.0.0 #Bloc pattern için kullanılır.
-  flutter_bloc: ^9.1.1 #Bloc pattern için kullanılır.
   get_it: ^8.2.0 #Dependency injection için kullanılır.
   injectable: ^2.5.1 #Dependency injection için kullanılır.
-  json_annotation: ^4.9.0 #JSON işlemleri için kullanılır.
-  envied: ^1.2.0 #Environment variables için kullanılır.
-  cupertino_icons: ^1.0.8 #Cupertino icons için kullanılır.
+  equatable: ^2.0.7 #Eşitlik kontrolü için kullanılır.
 
-  #Internationalization
+  #State Management
+  bloc: ^9.0.0 #Bloc pattern için kullanılır.
+  flutter_bloc: ^9.1.1 #Bloc pattern için kullanılır.
+
+  #Network
+  dio: ^5.9.0 #Http işlemleri için kullanılır.
+
+  #Configuration
+  envied: ^1.2.0 #Environment variables için kullanılır.
+  json_annotation: ^4.9.0 #JSON işlemleri için kullanılır. 
+
+
+  #Localization 
   easy_localization: ^3.0.8 #Internationalization için kullanılır.
 
   #Utilit
   easy_logger: ^0.0.2
   logger: ^2.6.1 #Logging için kullanılır.
+
+  #UI
+  cupertino_icons: ^1.0.8 #Cupertino icons için kullanılır.
+
 
 
 #Farklı versiyonlar için override yapıyoruz. Farklı versiyonların kullanımında hatalar alınabilir.
@@ -44,6 +55,7 @@ dev_dependencies:
   very_good_analysis: ^9.0.0 #Very good analysis için kullanılır.
   flutter_gen_runner: ^5.11.0 #Flutter gen runner için kullanılır.
   flutter_launcher_icons: ^0.14.4 #Flutter launcher icons için kullanılır. 
+  envied_generator: ^1.2.0 #Envied paketini kullanmak için kullanılır.
 
 
 #Flutter launcher icons için kullanılır. 
