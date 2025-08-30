@@ -18,13 +18,17 @@ dependencies:
   flutter_bloc: ^9.1.1 #Bloc pattern için kullanılır.
   get_it: ^8.2.0 #Dependency injection için kullanılır.
   injectable: ^2.5.1 #Dependency injection için kullanılır.
-  logger: ^2.6.1 #Logging için kullanılır.
   json_annotation: ^4.9.0 #JSON işlemleri için kullanılır.
   envied: ^1.2.0 #Environment variables için kullanılır.
   cupertino_icons: ^1.0.8 #Cupertino icons için kullanılır.
 
   #Internationalization
   easy_localization: ^3.0.8 #Internationalization için kullanılır.
+
+  #Utilit
+  easy_logger: ^0.0.2
+  logger: ^2.6.1 #Logging için kullanılır.
+
 
 #Farklı versiyonlar için override yapıyoruz. Farklı versiyonların kullanımında hatalar alınabilir.
 #Örnek: cupertino_icons: ^1.0.8 yerine cupertino_icons: ^1.0.7 yazıyoruz.

@@ -14,7 +14,7 @@ final class ProductLocalization extends EasyLocalization {
 
   static final List<Locale> _supportedLocales = Locales.supportedLocales.map((locale) => locale.locale).toList();
 
-  static const String _path = 'assets/localization';
+  static const String _path = 'assets/translations';
 
   /// Dil değiştirmek için kullanılır. [Locales] enum'u ile dil seçilir.
   static void updateLocale({required BuildContext context, required Locales locale}) {
