@@ -1,0 +1,17 @@
+{
+    "home": {
+        "title": "Anasayfa",
+        "change_language": "Dil Değiştir"
+    },
+    "general": {
+        "app_name": "Architecture Template",
+        "button": {
+            "save": "Kaydet",
+            "cancel": "İptal"
+        },
+        "language": {
+            "tr": "Türkçe",
+            "en": "İngilizce"
+        }
+    }
+}

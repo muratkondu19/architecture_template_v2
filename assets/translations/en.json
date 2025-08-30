@@ -1,0 +1,17 @@
+{
+    "home": {
+        "title": "Home",
+        "change_language": "Change Language"
+    },
+    "general": {
+        "app_name": "Architecture Template",
+        "button": {
+            "save": "Save",
+            "cancel": "Cancel"
+        },
+        "language": {
+            "tr": "Turkish",
+            "en": "English"
+        }
+    }
+}
