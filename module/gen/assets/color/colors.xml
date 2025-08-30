@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary">#000000</color>
+    <color name="secondary">#000000</color>
+    <color name="tertiary">#000000</color>
+    <color name="quaternary">#000000</color>
+    <color name="quinary">#000000</color>
+    <color name="senary">#000000</color>
+    <color name="septenary">#000000</color>
+    <color name="octonary">#000000</color>
+    <color name="nonary">#000000</color>
+    <color name="denary">#000000</color>
+</resources> 

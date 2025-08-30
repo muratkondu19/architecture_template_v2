@@ -42,6 +42,6 @@ final class CustomLightTheme extends CustomTheme {
     useMaterial3: true, // Material 3 tasarım sistemini kullan
     colorScheme: CustomColorScheme.lightColorScheme, // Özel açık tema renk şeması
     floatingActionButtonTheme: floatingActionButtonThemeData, // FAB tema ayarları
-    fontFamily: GoogleFonts.inter().fontFamily, // Inter font ailesi
+    fontFamily: GoogleFonts.roboto().fontFamily, // Inter font ailesi
   );
 }

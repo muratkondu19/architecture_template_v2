@@ -24,10 +24,6 @@ dependencies:
   #Network
   dio: ^5.9.0 #Http işlemleri için kullanılır.
 
-  #Configuration
-  envied: ^1.2.0 #Environment variables için kullanılır.
-  json_annotation: ^4.9.0 #JSON işlemleri için kullanılır. 
-
 
   #Localization 
   easy_localization: ^3.0.8 #Internationalization için kullanılır.
@@ -39,6 +35,9 @@ dependencies:
 
   #UI
   cupertino_icons: ^1.0.8 #Cupertino icons için kullanılır.
+
+  gen:
+    path: module/gen 
 
 
 
@@ -52,11 +51,8 @@ dev_dependencies:
     sdk: flutter
 
   flutter_lints: ^5.0.0
-  build_runner: ^2.7.0 #Build runner için kullanılır.
   very_good_analysis: ^9.0.0 #Very good analysis için kullanılır.
-  flutter_gen_runner: ^5.11.0 #Flutter gen runner için kullanılır.
   flutter_launcher_icons: ^0.14.4 #Flutter launcher icons için kullanılır. 
-  envied_generator: ^1.2.0 #Envied paketini kullanmak için kullanılır.
 
 
 #Flutter launcher icons için kullanılır. 
@@ -66,19 +62,8 @@ flutter_launcher_icons:
   image_path: "assets/icon/icon.png"
   min_sdk_android: 21 # android min sdk min:16, default 21
 
-flutter_gen:
-  output: lib/gen/ # Optional (default: lib/gen/)
-  # line_length: 80 # Optional
-
-  # Optional
-  integrations:
-    image: true
-    flutter_svg: true
-    rive: true
-    lottie: true
 
 flutter:
-
   uses-material-design: true
 
   assets:

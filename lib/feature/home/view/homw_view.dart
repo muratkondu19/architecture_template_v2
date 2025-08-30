@@ -6,6 +6,7 @@ import 'package:architecture_template/product/init/product_localization.dart';
 import 'package:architecture_template/product/utility/constants/enums/locales.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:gen/gen.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({super.key});
@@ -22,6 +23,8 @@ class _HomeViewState extends State<HomeView> with HomeViewMixin {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
+          //Gem üzerinden örnek icon kullanımı
+          Assets.icons.iconDdCart.svg(package: 'gen'),
           Text(AppEnvironmentItems.baseUrl.value, style: Theme.of(context).textTheme.titleMedium),
           Text(LocaleKeys.home_change_language.tr()),
           ElevatedButton(

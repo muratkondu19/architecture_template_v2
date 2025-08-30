@@ -1,5 +1,5 @@
-import 'package:architecture_template/product/init/config/app_configartion.dart';
 import 'package:envied/envied.dart';
+import 'package:gen/src/enviroment/app_configartion.dart';
 
 /// Envied paketi tarafından otomatik oluşturulan dosya
 /// Bu dosya .env dosyasındaki değerleri Dart koduna dönüştürür

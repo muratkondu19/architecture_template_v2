@@ -45,6 +45,6 @@ final class CustomDarkTheme extends CustomTheme {
     useMaterial3: true, // Material 3 tasarım sistemini kullan
     colorScheme: CustomColorScheme.darkColorScheme, // Özel koyu tema renk şeması
     floatingActionButtonTheme: floatingActionButtonThemeData, // FAB tema ayarları
-    fontFamily: GoogleFonts.inter().fontFamily, // Inter font ailesi
+    fontFamily: GoogleFonts.roboto().fontFamily, // Inter font ailesi
   );
 }

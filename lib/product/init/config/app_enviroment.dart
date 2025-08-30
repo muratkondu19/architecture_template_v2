@@ -1,7 +1,5 @@
-import 'package:architecture_template/product/init/config/app_configartion.dart';
-import 'package:architecture_template/product/init/config/dev_env.dart';
-import 'package:architecture_template/product/init/config/prod_env.dart';
 import 'package:flutter/foundation.dart';
+import 'package:gen/gen.dart';
 
 /// Uygulama ortam konfigürasyonunu yöneten ana sınıf
 ///
