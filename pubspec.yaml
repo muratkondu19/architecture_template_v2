@@ -35,6 +35,7 @@ dependencies:
   #Utilit
   easy_logger: ^0.0.2
   logger: ^2.6.1 #Logging için kullanılır.
+  google_fonts: ^6.3.1
 
   #UI
   cupertino_icons: ^1.0.8 #Cupertino icons için kullanılır.

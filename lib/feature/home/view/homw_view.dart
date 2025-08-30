@@ -22,7 +22,7 @@ class _HomeViewState extends State<HomeView> with HomeViewMixin {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text(AppEnvironmentItems.baseUrl.value),
+          Text(AppEnvironmentItems.baseUrl.value, style: Theme.of(context).textTheme.titleMedium),
           Text(LocaleKeys.home_change_language.tr()),
           ElevatedButton(
             onPressed: () {
