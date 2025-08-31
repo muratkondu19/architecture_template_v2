@@ -2,6 +2,7 @@ import 'package:architecture_template/product/init/application_initalize.dart';
 import 'package:architecture_template/product/init/product_localization.dart';
 import 'package:architecture_template/product/navigation/app_router.dart';
 import 'package:architecture_template/product/theme/index.dart';
+import 'package:device_preview/device_preview.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:widgets/widgets.dart';
@@ -9,7 +10,7 @@ import 'package:widgets/widgets.dart';
 void main() async {
   await ApplicationInitalize().init();
 
-  runApp(ProductLocalization(child: _MyApp()));
+  runApp(DevicePreview(builder: (context) => ProductLocalization(child: _MyApp())));
 }
 
 class _MyApp extends StatelessWidget {

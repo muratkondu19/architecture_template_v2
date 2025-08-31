@@ -11,6 +11,7 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:gen/gen.dart';
 import 'package:kartal/kartal.dart';
+import 'package:widgets/widgets.dart';
 
 // Bu sayfa otomatik olarak route olarak tanımlanır
 @RoutePage()
@@ -130,6 +131,15 @@ final class _HomeViewState extends State<HomeView> with HomeViewMixin {
                 items.ext.indexOrNull((item) => false);
               },
               child: const Icon(Icons.add),
+            ),
+
+            // Responsive tasarım için widget adaptasyon sınıfı
+            // AdaptAllView ile farklı cihaz türleri için uygun widget'ları gösterir
+            // phone, tablet ve desktop widget'ları farklı cihaz türleri için uygun widget'ları gösterir
+            AdaptAllView(
+              phone: Text(''.ext.version),
+              tablet: Text(''.ext.version),
+              desktop: Text(''.ext.version),
             ),
           ],
         ),
