@@ -141,6 +141,12 @@ final class _HomeViewState extends State<HomeView> with HomeViewMixin {
               tablet: Text(''.ext.version),
               desktop: Text(''.ext.version),
             ),
+
+            // Dialoglar için örnekler
+            // QuestionDialog ile kullanıcıdan metin girişi alma
+            const QuestionDialog(title: 'Question Dialog'),
+            // SuccessDialog ile başarı mesajı gösterme
+            const SuccessDialog(title: 'Success Dialog'),
           ],
         ),
       ),
