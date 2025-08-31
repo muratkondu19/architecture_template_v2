@@ -1,6 +1,6 @@
-import 'package:architecture_template/feature/home/view/homw_view.dart';
 import 'package:architecture_template/product/init/application_initalize.dart';
 import 'package:architecture_template/product/init/product_localization.dart';
+import 'package:architecture_template/product/navigation/app_router.dart';
 import 'package:architecture_template/product/theme/index.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
@@ -12,16 +12,17 @@ void main() async {
 }
 
 class _MyApp extends StatelessWidget {
+  static final _router = AppRouter();
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
+      routerConfig: _router.config(),
       localizationsDelegates: context.localizationDelegates,
       supportedLocales: context.supportedLocales,
       locale: context.locale,
       theme: CustomLightTheme().themeData,
       darkTheme: CustomDarkTheme().themeData,
       themeMode: ThemeMode.light,
-      home: const HomeView(),
     );
   }
 }
