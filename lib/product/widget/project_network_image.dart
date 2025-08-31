@@ -10,7 +10,8 @@ final class ProjectNetworkImage extends StatelessWidget {
   Widget build(BuildContext context) {
     return CustomNetworkImage(
       imageUrl: url,
-      loadingWidget: Assets.lottie.loading.lottie(),
+      loadingWidget: Assets.lottie.loading.lottie(package: 'gen'),
+      emptyWidget: Assets.lottie.loading.lottie(package: 'gen'),
     );
   }
 }
