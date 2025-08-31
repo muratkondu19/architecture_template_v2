@@ -40,8 +40,9 @@ dependencies:
 
   gen:
     path: module/gen 
-
-
+  
+  common:
+    path: module/common
 
 #Farklı versiyonlar için override yapıyoruz. Farklı versiyonların kullanımında hatalar alınabilir.
 #Örnek: cupertino_icons: ^1.0.8 yerine cupertino_icons: ^1.0.7 yazıyoruz.
