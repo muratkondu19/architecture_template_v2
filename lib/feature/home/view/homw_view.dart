@@ -5,6 +5,8 @@ import 'package:architecture_template/product/init/language/locale_keys.g.dart';
 import 'package:architecture_template/product/init/product_localization.dart';
 import 'package:architecture_template/product/navigation/app_router.dart';
 import 'package:architecture_template/product/utility/constants/enums/locales.dart';
+import 'package:architecture_template/product/widget/button/custom_login/custom_login_button.dart';
+import 'package:architecture_template/product/widget/padding/project_padding.dart';
 import 'package:architecture_template/product/widget/project_network_image.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:easy_localization/easy_localization.dart';
@@ -33,7 +35,10 @@ final class _HomeViewState extends State<HomeView> with HomeViewMixin {
           children: [
             // Gen paketi üzerinden SVG icon kullanımı örneği
             // Assets.icons.iconDdCart.svg(package: 'gen') ile gen paketindeki icon'a erişim
-            Assets.icons.iconDdCart.svg(package: 'gen'),
+            Container(
+              padding: const ProjectPadding.allNormal(),
+              child: Assets.icons.iconDdCart.svg(package: 'gen'),
+            ),
 
             // AppEnvironmentItems.baseUrl.value ile environment değişkenine erişim örneği
             Text(AppEnvironmentItems.baseUrl.value, style: Theme.of(context).textTheme.titleMedium),
@@ -147,6 +152,9 @@ final class _HomeViewState extends State<HomeView> with HomeViewMixin {
             const QuestionDialog(title: 'Question Dialog'),
             // SuccessDialog ile başarı mesajı gösterme
             const SuccessDialog(title: 'Success Dialog'),
+
+            // Custom Login Button için örnek
+            CustomLoginButton(onOperation: () async => Future.delayed(const Duration(seconds: 2), () => true)),
           ],
         ),
       ),
