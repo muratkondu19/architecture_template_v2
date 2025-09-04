@@ -1,5 +1,6 @@
 import 'package:architecture_template/feature/home/view/mixin/home_view_mixin.dart';
 import 'package:architecture_template/feature/home/view/widget/home_app_bar.dart';
+import 'package:architecture_template/feature/home/view/widget/home_user_list.dart';
 import 'package:architecture_template/feature/home/view_model/home_view_model.dart';
 import 'package:architecture_template/feature/home/view_model/state/home_state.dart';
 import 'package:architecture_template/product/init/config/app_enviroment.dart';
@@ -186,7 +187,7 @@ final class _HomeViewState extends BaseState<HomeView> with HomeViewMixin {
                 child: const Text('Change Theme Mode'),
               ),
 
-              const _UserList(),
+              const _UserBlockList(),
             ],
           ),
         ),
@@ -198,8 +199,8 @@ final class _HomeViewState extends BaseState<HomeView> with HomeViewMixin {
 /// Kullanıcı listesi widget'ı
 /// Bu widget, HomeViewModel'den gelen kullanıcı verilerini listeler
 /// BlocListener ile state değişikliklerini dinler ve BlocSelector ile sadece users listesini dinler
-class _UserList extends StatelessWidget {
-  const _UserList();
+class _UserBlockList extends StatelessWidget {
+  const _UserBlockList();
 
   @override
   Widget build(BuildContext context) {
@@ -220,12 +221,7 @@ class _UserList extends StatelessWidget {
             return const Center(child: Text('No users'));
           }
           // Kullanıcı listesini ListView.builder ile oluştur
-          return ListView.builder(
-            itemBuilder: (context, index) => ListTile(
-              title: Text(state[index].id.toString()), // Kullanıcı ID'si
-              subtitle: Text(state[index].title.toString()), // Kullanıcı başlığı
-            ),
-          );
+          return HomeUserList(users: state);
         },
       ),
     );
