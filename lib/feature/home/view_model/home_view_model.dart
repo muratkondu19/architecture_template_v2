@@ -3,6 +3,7 @@ import 'package:architecture_template/product/cache/model/user_cache_model.dart'
 import 'package:architecture_template/product/service/interface/authentication_operation.dart';
 import 'package:architecture_template/product/state/base/base_cubit.dart';
 import 'package:architecture_template/product/state/container/product_state_items.dart';
+import 'package:core/core.dart';
 import 'package:gen/gen.dart';
 
 /// Home sayfası için ViewModel sınıfı
@@ -11,12 +12,16 @@ import 'package:gen/gen.dart';
 class HomeViewModel extends BaseCubit<HomeState> {
   /// Constructor - authentication service dependency injection ile alınır
   /// @param authenticationOperation - Kullanıcı işlemleri için gerekli service
-  HomeViewModel({required AuthenticationOperation authenticationOperation}) : super(const HomeState(isLoading: false)) {
-    _authenticationOperation = authenticationOperation;
-  }
+  HomeViewModel({
+    required AuthenticationOperation authenticationOperation,
+    required HiveCacheOperation<UserCacheModel> userCacheOperation,
+  }) : _authenticationOperation = authenticationOperation,
+       _userCacheOperation = userCacheOperation,
+       super(const HomeState(isLoading: false));
 
   /// Private authentication service instance'ı
-  late final AuthenticationOperation _authenticationOperation;
+  final AuthenticationOperation _authenticationOperation;
+  final HiveCacheOperation<UserCacheModel> _userCacheOperation;
 
   /// Loading durumunu değiştiren metod
   /// @param isLoading - Yeni loading durumu, null ise mevcut durumu tersine çevirir
@@ -49,5 +54,5 @@ class HomeViewModel extends BaseCubit<HomeState> {
   /// ProductStateItems.productCache üzerinden cache'deki UserCacheModel'ları alır
   /// Her UserCacheModel'dan user objesini çıkararak User listesi oluşturur
   /// @return - Cache'deki tüm User'ların listesi
-  List<User> get users => ProductStateItems.productCache.userCacheOperation.getAll().map((e) => e.user).toList();
+  List<User> get users => _userCacheOperation.getAll().map((e) => e.user).toList();
 }
