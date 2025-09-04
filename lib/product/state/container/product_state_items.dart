@@ -1,5 +1,6 @@
 import 'package:architecture_template/product/service/manager/product_service_manager.dart';
 import 'package:architecture_template/product/state/container/product_state_container.dart';
+import 'package:architecture_template/product/state/view_model/product_view_model.dart';
 
 /// Product state yönetimi için kullanılan singleton sınıf
 /// Bu sınıf, uygulama genelinde kullanılan state objelerine erişim sağlar
@@ -11,5 +12,12 @@ final class ProductStateItems {
   /// Network manager'a erişim sağlayan static getter
   /// ProductStateContainer'dan ProductNetworkManager instance'ını döndürür
   /// Bu sayede tüm uygulama genelinde aynı network manager instance'ı kullanılır
+  /// HTTP istekleri için merkezi network yönetimi sağlar
   static ProductNetworkManager get networkManager => ProductStateContainer.read<ProductNetworkManager>();
+
+  /// Product view model'a erişim sağlayan static getter
+  /// ProductStateContainer'dan ProductViewModel instance'ını döndürür
+  /// Bu sayede tüm uygulama genelinde aynı view model instance'ı kullanılır
+  /// Global state yönetimi için merkezi view model erişimi sağlar
+  static ProductViewModel get productViewModel => ProductStateContainer.read<ProductViewModel>();
 }
