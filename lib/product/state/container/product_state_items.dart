@@ -1,3 +1,4 @@
+import 'package:architecture_template/product/cache/product_cache.dart';
 import 'package:architecture_template/product/service/manager/product_service_manager.dart';
 import 'package:architecture_template/product/state/container/product_state_container.dart';
 import 'package:architecture_template/product/state/view_model/product_view_model.dart';
@@ -20,4 +21,10 @@ final class ProductStateItems {
   /// Bu sayede tüm uygulama genelinde aynı view model instance'ı kullanılır
   /// Global state yönetimi için merkezi view model erişimi sağlar
   static ProductViewModel get productViewModel => ProductStateContainer.read<ProductViewModel>();
+
+  /// Product cache'e erişim sağlayan static getter
+  /// ProductStateContainer'dan ProductCache instance'ını döndürür
+  /// Bu sayede tüm uygulama genelinde aynı cache instance'ı kullanılır
+  /// Cache yönetimi için merkezi cache erişimi sağlar
+  static ProductCache get productCache => ProductStateContainer.read<ProductCache>();
 }

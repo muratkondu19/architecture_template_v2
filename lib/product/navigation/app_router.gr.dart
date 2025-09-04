@@ -1,4 +1,3 @@
-// dart format width=80
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
 // **************************************************************************
@@ -10,29 +9,58 @@
 
 part of 'app_router.dart';
 
+abstract class _$AppRouter extends RootStackRouter {
+  // ignore: unused_element
+  _$AppRouter({super.navigatorKey});
+
+  @override
+  final Map<String, PageFactory> pagesMap = {
+    HomeDetailRoute.name: (routeData) {
+      final args = routeData.argsAs<HomeDetailRouteArgs>();
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: HomeDetailView(
+          id: args.id,
+          key: args.key,
+        ),
+      );
+    },
+    HomeRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const HomeView(),
+      );
+    },
+  };
+}
+
 /// generated route for
 /// [HomeDetailView]
 class HomeDetailRoute extends PageRouteInfo<HomeDetailRouteArgs> {
-  HomeDetailRoute({required String id, Key? key, List<PageRouteInfo>? children})
-    : super(
-        HomeDetailRoute.name,
-        args: HomeDetailRouteArgs(id: id, key: key),
-        initialChildren: children,
-      );
+  HomeDetailRoute({
+    required String id,
+    Key? key,
+    List<PageRouteInfo>? children,
+  }) : super(
+          HomeDetailRoute.name,
+          args: HomeDetailRouteArgs(
+            id: id,
+            key: key,
+          ),
+          initialChildren: children,
+        );
 
   static const String name = 'HomeDetailRoute';
 
-  static PageInfo page = PageInfo(
-    name,
-    builder: (data) {
-      final args = data.argsAs<HomeDetailRouteArgs>();
-      return HomeDetailView(id: args.id, key: args.key);
-    },
-  );
+  static const PageInfo<HomeDetailRouteArgs> page =
+      PageInfo<HomeDetailRouteArgs>(name);
 }
 
 class HomeDetailRouteArgs {
-  const HomeDetailRouteArgs({required this.id, this.key});
+  const HomeDetailRouteArgs({
+    required this.id,
+    this.key,
+  });
 
   final String id;
 
@@ -42,30 +70,18 @@ class HomeDetailRouteArgs {
   String toString() {
     return 'HomeDetailRouteArgs{id: $id, key: $key}';
   }
-
-  @override
-  bool operator ==(Object other) {
-    if (identical(this, other)) return true;
-    if (other is! HomeDetailRouteArgs) return false;
-    return id == other.id && key == other.key;
-  }
-
-  @override
-  int get hashCode => id.hashCode ^ key.hashCode;
 }
 
 /// generated route for
 /// [HomeView]
 class HomeRoute extends PageRouteInfo<void> {
   const HomeRoute({List<PageRouteInfo>? children})
-    : super(HomeRoute.name, initialChildren: children);
+      : super(
+          HomeRoute.name,
+          initialChildren: children,
+        );
 
   static const String name = 'HomeRoute';
 
-  static PageInfo page = PageInfo(
-    name,
-    builder: (data) {
-      return const HomeView();
-    },
-  );
+  static const PageInfo<void> page = PageInfo<void>(name);
 }
