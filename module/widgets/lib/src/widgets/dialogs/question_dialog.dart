@@ -56,7 +56,8 @@ class _QuestionDialogState extends State<QuestionDialog> {
       title: Text(widget.title), // Dialog başlığını gösterir
       content: TextField(
         // Kullanıcı metin girişi yapar
-        onChanged: (value) => _response = value, // Girilen değeri _response'a kaydeder
+        onChanged: (value) =>
+            _response = value, // Girilen değeri _response'a kaydeder
       ),
       actions: [
         // Onay butonu - check ikonu ile

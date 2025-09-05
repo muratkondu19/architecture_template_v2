@@ -11,7 +11,7 @@ part of 'app_router.dart';
 
 abstract class _$AppRouter extends RootStackRouter {
   // ignore: unused_element
-  _$AppRouter({super.navigatorKey});
+  _$AppRouter();
 
   @override
   final Map<String, PageFactory> pagesMap = {
@@ -42,18 +42,17 @@ class HomeDetailRoute extends PageRouteInfo<HomeDetailRouteArgs> {
     Key? key,
     List<PageRouteInfo>? children,
   }) : super(
-          HomeDetailRoute.name,
-          args: HomeDetailRouteArgs(
-            id: id,
-            key: key,
-          ),
-          initialChildren: children,
-        );
+         HomeDetailRoute.name,
+         args: HomeDetailRouteArgs(
+           id: id,
+           key: key,
+         ),
+         initialChildren: children,
+       );
 
   static const String name = 'HomeDetailRoute';
 
-  static const PageInfo<HomeDetailRouteArgs> page =
-      PageInfo<HomeDetailRouteArgs>(name);
+  static const PageInfo<HomeDetailRouteArgs> page = PageInfo<HomeDetailRouteArgs>(name);
 }
 
 class HomeDetailRouteArgs {
@@ -76,10 +75,10 @@ class HomeDetailRouteArgs {
 /// [HomeView]
 class HomeRoute extends PageRouteInfo<void> {
   const HomeRoute({List<PageRouteInfo>? children})
-      : super(
-          HomeRoute.name,
-          initialChildren: children,
-        );
+    : super(
+        HomeRoute.name,
+        initialChildren: children,
+      );
 
   static const String name = 'HomeRoute';
 

@@ -18,9 +18,8 @@ void main() {
   });
 
   test('Add a data for database', () {
-    final userOperation = HiveCacheOperation<UserCache>();
-
-    userOperation.add(UserCache(id: '1', name: 'vb'));
+    final userOperation = HiveCacheOperation<UserCache>()
+      ..add(UserCache(id: '1', name: 'vb'));
     final item = userOperation.get('1');
     expect(item, isNotNull);
   });

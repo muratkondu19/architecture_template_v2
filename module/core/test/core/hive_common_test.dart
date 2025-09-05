@@ -33,12 +33,12 @@ Future<void> initTests() async {
 Future<Box<E>> openTestBox<E>({String? name}) async {
   await initTests();
   name ??= Random().nextInt(999999).toString();
-  final box = Hive.box<E>(name: name);
-  box.verify();
+  final box = Hive.box<E>(name: name)..verify();
   addTearDown(() async {
     if (box.isOpen) {
-      box.verify();
-      box.deleteFromDisk();
+      box
+        ..verify()
+        ..deleteFromDisk();
     }
   });
 
@@ -48,7 +48,11 @@ Future<Box<E>> openTestBox<E>({String? name}) async {
 extension BoxVerify on Box<void> {
   void verify() {
     final isar = Isar.get(schemas: [FrameSchema], name: name);
-    final keys = isar.frames.where().keyProperty().findAll().whereType<String>();
+    final keys = isar.frames
+        .where()
+        .keyProperty()
+        .findAll()
+        .whereType<String>();
     expect(keys.length, keys.toSet().length);
   }
 }

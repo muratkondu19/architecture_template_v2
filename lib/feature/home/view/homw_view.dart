@@ -54,7 +54,10 @@ final class _HomeViewState extends BaseState<HomeView> with HomeViewMixin {
               ),
 
               // AppEnvironmentItems.baseUrl.value ile environment değişkenine erişim örneği
-              Text(AppEnvironmentItems.baseUrl.value, style: Theme.of(context).textTheme.titleMedium),
+              Text(
+                AppEnvironmentItems.baseUrl.value,
+                style: Theme.of(context).textTheme.titleMedium,
+              ),
 
               // easy_localization paketi ile çoklu dil desteği örneği
               // LocaleKeys.home_change_language.tr() ile mevcut dilde metin gösterimi
@@ -63,7 +66,10 @@ final class _HomeViewState extends BaseState<HomeView> with HomeViewMixin {
               // Dil değiştirme butonu örneği - İngilizce'ye geçiş
               ElevatedButton(
                 onPressed: () {
-                  ProductLocalization.updateLocale(context: context, locale: Locales.en);
+                  ProductLocalization.updateLocale(
+                    context: context,
+                    locale: Locales.en,
+                  );
                 },
                 child: Text(LocaleKeys.general_language_en.tr()),
               ),
@@ -71,7 +77,10 @@ final class _HomeViewState extends BaseState<HomeView> with HomeViewMixin {
               // Dil değiştirme butonu örneği - Türkçe'ye geçiş
               ElevatedButton(
                 onPressed: () {
-                  ProductLocalization.updateLocale(context: context, locale: Locales.tr);
+                  ProductLocalization.updateLocale(
+                    context: context,
+                    locale: Locales.tr,
+                  );
                 },
                 child: Text(LocaleKeys.general_language_tr.tr()),
               ),
@@ -103,7 +112,12 @@ final class _HomeViewState extends BaseState<HomeView> with HomeViewMixin {
               // Kartal paketi ile text theme'i özelleştirme örneği
               // copyWith ile mevcut style'ı koruyarak sadece rengi değiştirme
               // '#fcb103'.ext.color ile hex string'i Color objesine çevirme
-              Text('Example', style: context.general.textTheme.titleMedium!.copyWith(color: 'fcb103'.ext.color)),
+              Text(
+                'Example',
+                style: context.general.textTheme.titleMedium!.copyWith(
+                  color: 'fcb103'.ext.color,
+                ),
+              ),
 
               // Kartal paketi ile Future Builder kullanım örneği (şu anda yorum satırında)
               // Future<String>().ext.toBuild ile basitleştirilmiş future builder
@@ -123,7 +137,10 @@ final class _HomeViewState extends BaseState<HomeView> with HomeViewMixin {
               ),
 
               // Özel network image widget kullanım örneği
-              const ProjectNetworkImage(url: 'https://cdn-icons-png.flaticon.com/512/10278/10278187.png'),
+              const ProjectNetworkImage(
+                url:
+                    'https://cdn-icons-png.flaticon.com/512/10278/10278187.png',
+              ),
 
               FloatingActionButton(
                 onPressed: () {
@@ -178,7 +195,10 @@ final class _HomeViewState extends BaseState<HomeView> with HomeViewMixin {
               const SuccessDialog(title: 'Success Dialog'),
 
               // Custom Login Button için örnek
-              CustomLoginButton(onOperation: () async => Future.delayed(const Duration(seconds: 2), () => true)),
+              CustomLoginButton(
+                onOperation: () async =>
+                    Future.delayed(const Duration(seconds: 2), () => true),
+              ),
 
               ElevatedButton(
                 onPressed: () {

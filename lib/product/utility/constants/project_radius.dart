@@ -11,6 +11,9 @@ enum ProjectRadius {
   /// 32.
   large(32);
 
-  final double value;
+  /// Constructor - value değerini atar
   const ProjectRadius(this.value);
+
+  /// Constructor - value değerini atar
+  final double value;
 }

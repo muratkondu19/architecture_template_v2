@@ -13,13 +13,13 @@ enum ServicePath {
   comments('/apiv2/comments'), // Yorum API'si
   albums('/apiv2/albums'), // Albüm API'si
   photos('/apiv2/photos'), // Fotoğraf API'si
-  todos('/apiv2/todos'); // Todo API'si
-
-  /// API path'ini tutan final değişken
-  final String path;
+  todos('/apiv2/todos');
 
   /// Constructor - path değerini atar
   const ServicePath(this.path);
+
+  /// API path'ini tutan final değişken
+  final String path;
 
   /// Tam path'i döndüren getter metodu
   String get fullPath => path;

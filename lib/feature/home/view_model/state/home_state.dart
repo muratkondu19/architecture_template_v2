@@ -28,6 +28,9 @@ final class HomeState extends Equatable {
   /// @param users - Yeni kullanıcı listesi (null ise mevcut değer korunur)
   /// @return - Yeni HomeState instance'ı
   HomeState copyWith({bool? isLoading, List<User>? users}) {
-    return HomeState(isLoading: isLoading ?? this.isLoading, users: users ?? this.users);
+    return HomeState(
+      isLoading: isLoading ?? this.isLoading,
+      users: users ?? this.users,
+    );
   }
 }

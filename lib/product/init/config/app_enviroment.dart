@@ -76,7 +76,7 @@ enum AppEnvironmentItems {
       }
     } catch (e) {
       // AppEnvironment başlatılmamışsa hata fırlat
-      throw Exception('AppEnvironment is not initialized.');
+      throw Exception('AppEnvironment is not initialized.$e');
     }
   }
 }

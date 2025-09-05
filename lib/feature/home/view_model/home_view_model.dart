@@ -24,7 +24,8 @@ class HomeViewModel extends BaseCubit<HomeState> {
   final HiveCacheOperation<UserCacheModel> _userCacheOperation;
 
   /// Loading durumunu değiştiren metod
-  /// @param isLoading - Yeni loading durumu, null ise mevcut durumu tersine çevirir
+  /// @param isLoading - Yeni loading durumu, null ise mevcut durumu
+  /// tersine çevirir
   Future<void> changeLoading({bool? isLoading}) async {
     emit(state.copyWith(isLoading: isLoading ?? !state.isLoading));
   }
@@ -46,13 +47,17 @@ class HomeViewModel extends BaseCubit<HomeState> {
   void _saveUsersToCache(List<User> users) {
     // Her user için UserCacheModel oluştur ve cache'e ekle
     for (final user in users) {
-      ProductStateItems.productCache.userCacheOperation.add(UserCacheModel(user: user));
+      ProductStateItems.productCache.userCacheOperation.add(
+        UserCacheModel(user: user),
+      );
     }
   }
 
   /// Cache'deki tüm kullanıcıları döndüren getter
-  /// ProductStateItems.productCache üzerinden cache'deki UserCacheModel'ları alır
+  /// ProductStateItems.productCache üzerinden cache'deki
+  /// UserCacheModel'ları alır
   /// Her UserCacheModel'dan user objesini çıkararak User listesi oluşturur
   /// @return - Cache'deki tüm User'ların listesi
-  List<User> get users => _userCacheOperation.getAll().map((e) => e.user).toList();
+  List<User> get users =>
+      _userCacheOperation.getAll().map((e) => e.user).toList();
 }

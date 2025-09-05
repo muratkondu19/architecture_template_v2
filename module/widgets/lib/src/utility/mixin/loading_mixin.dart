@@ -18,7 +18,7 @@ mixin LoadingMixin<T extends StatefulWidget> on State<T> {
   /// Loading durumunu takip eden ValueNotifier'ı döndüren getter
   /// Bu notifier ValueListenableBuilder ile kullanılabilir
   /// UI'da loading durumuna göre widget'ları göstermek/gizlemek için kullanılır
-  /// Returns: ValueNotifier<bool> - Loading durumunu dinleyebileceğiniz notifier
+  /// Returns: ValueNotifier<> - Loading durumunu dinleyebileceğiniz notifier
   ValueNotifier<bool> get isLoadingNotifier => _isLoadingNotifier;
 
   /// Loading durumunu değiştiren metod

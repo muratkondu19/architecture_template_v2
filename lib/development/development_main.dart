@@ -23,7 +23,8 @@ void main() async {
   // _MyApp: Ana uygulama widget'ı
   runApp(
     DevicePreview(
-      builder: (context) => StateInitialize(child: ProductLocalization(child: _MyApp())),
+      builder: (context) =>
+          StateInitialize(child: ProductLocalization(child: _MyApp())),
     ),
   );
 }
@@ -41,7 +42,8 @@ class _MyApp extends StatelessWidget {
       routerConfig: _router.config(),
 
       // Çoklu dil desteği yapılandırması
-      localizationsDelegates: context.localizationDelegates, // Dil çevirileri için delegate'ler
+      localizationsDelegates:
+          context.localizationDelegates, // Dil çevirileri için delegate'ler
       supportedLocales: context.supportedLocales, // Desteklenen diller
       locale: context.locale, // Mevcut dil ayarı
       // Responsive tasarım için custom builder
@@ -50,7 +52,10 @@ class _MyApp extends StatelessWidget {
       // Tema yapılandırması
       theme: CustomLightTheme().themeData, // Açık tema
       darkTheme: CustomDarkTheme().themeData, // Koyu tema
-      themeMode: context.watch<ProductViewModel>().state.themeMode, // Dinamik tema modu
+      themeMode: context
+          .watch<ProductViewModel>()
+          .state
+          .themeMode, // Dinamik tema modu
     );
   }
 }

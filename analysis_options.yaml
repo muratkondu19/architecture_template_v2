@@ -1,3 +1,19 @@
 
 include: package:very_good_analysis/analysis_options.9.0.0.yaml
 
+linter:
+  rules:
+    # Public üyeler için dokümantasyon zorunluluğunu kaldır
+    public_member_api_docs: false
+    # Satır uzunluk sınırını 120 karaktere çıkar
+    lines_longer_than_80_chars: false
+
+
+# Dart formatter ayarları
+dart:
+  line_length: 120
+analyzer:
+  errors:
+    constant_identifier_names: ignore
+    one_member_abstracts: ignore
+

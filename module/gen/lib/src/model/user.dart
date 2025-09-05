@@ -5,7 +5,6 @@ import 'package:vexana/vexana.dart';
 part 'user.g.dart';
 
 @JsonSerializable()
-// ignore: public_member_api_docs
 class User extends INetworkModel<User> with EquatableMixin {
   const User({this.userId, this.id, this.title, this.body});
   factory User.fromJson(Map<String, dynamic> json) => _$UserFromJson(json);

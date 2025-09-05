@@ -17,7 +17,7 @@ final class CustomColorScheme {
     onSecondaryContainer: Color(0xFF1D192B),
     tertiary: Color(0xFF7D5260),
     onTertiary: Color(0xFFFFFFFF),
-    tertiaryContainer: Color(0xffffffd8e4),
+    tertiaryContainer: Color(0xffffffd8),
     onTertiaryContainer: Color(0xFF31111D),
     error: Color(0xFFB3261E),
     onError: Color(0xFFFFFFFF),

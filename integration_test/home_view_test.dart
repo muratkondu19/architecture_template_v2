@@ -20,7 +20,8 @@ void main() {
       app.main();
 
       // Widget tree'nin tamamen yüklenmesini bekle
-      // pumpAndSettle() tüm animasyonların ve async işlemlerin tamamlanmasını sağlar
+      // pumpAndSettle() tüm animasyonların ve async işlemlerin
+      //tamamlanmasını sağlar
       await $.pumpAndSettle();
 
       // FloatingActionButton'ı bul ve tıkla
