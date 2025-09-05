@@ -70,6 +70,7 @@ dev_dependencies:
   mockito: ^5.4.4
   patrol: ^3.19.0
   very_good_analysis: ^9.0.0 # Very good analysis için kullanılır.
+  analyzer: ^6.4.1
 
 
 #Flutter launcher icons için kullanılır. 

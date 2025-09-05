@@ -9,6 +9,7 @@
 
 part of 'app_router.dart';
 
+// ignore: unused_element
 abstract class _$AppRouter extends RootStackRouter {
   // ignore: unused_element
   _$AppRouter();
@@ -52,7 +53,8 @@ class HomeDetailRoute extends PageRouteInfo<HomeDetailRouteArgs> {
 
   static const String name = 'HomeDetailRoute';
 
-  static const PageInfo<HomeDetailRouteArgs> page = PageInfo<HomeDetailRouteArgs>(name);
+  static const PageInfo<HomeDetailRouteArgs> page =
+      PageInfo<HomeDetailRouteArgs>(name);
 }
 
 class HomeDetailRouteArgs {
